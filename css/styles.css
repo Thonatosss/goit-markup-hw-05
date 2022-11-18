@@ -55,7 +55,10 @@ img {
   padding-bottom: 94px;
 }
 /* НАВІГАЦІЯ */
-.navigation-list-item .navigation-link {
+.navigation-list-item .navigation-link-studio,
+.navigation-list-item .navigation-link-portfolio,
+.navigation-list-item .navigation-link-contacts {
+  position: relative;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -65,9 +68,24 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.navigation-link:hover,
-.navigation-link:focus {
+
+.navigation-link-studio:hover,
+.navigation-link-studio:focus,
+.navigation-link-portfolio:hover,
+.navigation-link-portfolio:focus,
+.navigation-link-contacts:hover,
+.navigation-link-contacts:focus {
   color: var(--accent-color);
+}
+.navigation-link-studio::after {
+  content: "";
+  height: 4px;
+  display: block;
+  width: 100%;
+  background: #2196f3;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0px;
 }
 .list-killer {
   list-style: none;
@@ -119,7 +137,7 @@ img {
 }
 
 /* ГЕРОЙ */
-.advantages-svg{
+.advantages-svg {
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -280,6 +298,27 @@ img {
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
+.first-photo,
+.second-photo,
+.third-photo {
+  position: relative;
+}
+.description {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  background: rgba(47, 48, 58, 0.8);
+  color: #ffffff;
+
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  position: absolute;
+  bottom: 0;
+}
 .about.section {
   padding-top: 0;
 }
@@ -381,7 +420,7 @@ img {
 }
 .custumer-list-item {
   display: flex;
-  width: calc((100% - 150px) / 6); 
+  width: calc((100% - 150px) / 6);
   height: 92px;
 }
 
@@ -402,7 +441,7 @@ img {
   fill: #2196f3;
 }
 .custumer-list-link:hover,
-.custumer-list-link:focus{ 
+.custumer-list-link:focus {
   border-color: #2196f3;
 }
 
@@ -535,9 +574,7 @@ img {
 
   letter-spacing: 0.06em;
 }
-.poster-title {
-  margin-bottom: 4px;
-}
+
 .list-item .poster-filter {
   font-size: 16px;
   line-height: 1.88;
@@ -548,6 +585,32 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+.poster-description {
+  position: relative;
+}
+.posters-link:hover .poster-description::before,
+.posters-link:hover .poster-description-text{
+  opacity: 1;
+}
+
+.poster-description::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  position: absolute;
+  opacity: 0;
+}
+.poster-description-text {
+  position: absolute;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  padding: 63px 24px;
+  top: 0;
+  opacity: 0;
 }
 
 .list-item {
