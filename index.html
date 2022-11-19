@@ -28,7 +28,7 @@
         <nav class="navigation">
           <ul class="navigation-list list-killer">
             <li class="navigation-list-item">
-              <a href="./index.html" class="navigation-link-studio links">Студія</a>
+              <a href="./index.html" class="navigation-link-studio links underscore">Студія</a>
             </li>
             <li class="navigation-list-item">
               <a href="./portfolio.html" class="navigation-link-portfolio links"
@@ -70,7 +70,7 @@
             ВАШОГО БІЗНЕСУ
           </h1>
 
-          <button type="button" class="order-btn">Замовити послугу</button>
+          <button type="button" class="order-btn" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!-- переваги -->
@@ -525,5 +525,16 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal ">
+        <button type="button" class="modal-close" data-modal-close>
+          <svg class="icon-close" width="11px" height="11px">
+            <use href="./images/Sprite/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
